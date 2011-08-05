@@ -47,6 +47,18 @@ public class RemoteClientManager implements
 	private TodoApplication todoApplication;
 	private SharedPreferences sharedPreferences;
 
+	public static final RemoteClient DUMMY_CLIENT = new RemoteClient() {
+		@Override public Client getClient() { return null; }
+		@Override public boolean authenticate() { return false; }
+		@Override public void deauthenticate() { /* NOOP */ }
+		@Override public boolean isAuthenticated() { return false; }
+		@Override public boolean isLoggedIn() { return false; }
+		@Override public RemoteLoginTask getLoginTask() { return null; }
+		@Override public File pullTodo() { return null; }
+		@Override public void pushTodo(File f){ /* NOOP */ }
+		@Override public boolean isAvailable() { return false; }
+	};
+
 	public RemoteClientManager(TodoApplication todoApplication,
 			SharedPreferences sharedPreferences) {
 		this.todoApplication = todoApplication;
@@ -85,9 +97,8 @@ public class RemoteClientManager implements
 			throw new UnsupportedOperationException();
 			// return new LocalClient(todoApplication, sharedPreferences);
 		}
-
-		Log.i(TAG, "NO CLIENT SPECIFIED - Defaultint to DROPBOX client");
-		return new DropboxRemoteClient(todoApplication, sharedPreferences);
+		
+		return DUMMY_CLIENT;
 	}
 
 	@Override
