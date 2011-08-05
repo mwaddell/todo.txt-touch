@@ -45,7 +45,6 @@ public class LoginScreen extends Activity {
 	final static String TAG = LoginScreen.class.getSimpleName();
 
 	private TodoApplication m_app;
-	private Button m_LoginButton;
 	private BroadcastReceiver m_broadcastReceiver;
 
 	@Override
@@ -71,10 +70,22 @@ public class LoginScreen extends Activity {
 		};
 		registerReceiver(m_broadcastReceiver, intentFilter);
 
-		m_LoginButton = (Button) findViewById(R.id.login);
+			Button m_LoginButton = (Button) findViewById(R.id.dropbox);
 		m_LoginButton.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				login();
+				login("DROPBOX");
+			}
+		});
+			m_LoginButton = (Button) findViewById(R.id.evernote);
+		m_LoginButton.setOnClickListener(new OnClickListener() {
+			public void onClick(View v) {
+				login("EVERNOTE");
+			}
+		});
+			m_LoginButton = (Button) findViewById(R.id.local);
+		m_LoginButton.setOnClickListener(new OnClickListener() {
+			public void onClick(View v) {
+				login("LOCAL");
 			}
 		});
 
@@ -95,6 +106,11 @@ public class LoginScreen extends Activity {
 	protected void onDestroy() {
 		super.onDestroy();
 		unregisterReceiver(m_broadcastReceiver);
+	}
+
+	void login(String newClientToken) {
+		m_app.setClientToken(newClientToken);
+		this.login();
 	}
 
 	void login() {

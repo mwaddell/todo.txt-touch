@@ -30,7 +30,34 @@ package com.todotxt.todotxttouch.remote;
  * Holder for Supported Remote Clients
  *
  * @author Tim Barlotta
+ * @author Michael J. Waddell <michael[at]waddellnet[dot]com>
  */
-public enum Client {
-    DROPBOX;
+public enum Client 
+{
+    DROPBOX,
+    EVERNOTE,
+    LOCAL;
+
+    @Override
+    public final String toString() 
+    {
+        return name();
+    }
+
+    /** Returns the client with the given name (null if not found). */
+    public static final Client fromString(String str)
+    {
+        Client retVal = null;
+
+        if (str != null) {
+            try {
+                retVal = Enum.valueOf(Client.class, str.trim());
+            } catch (IllegalArgumentException e) {
+                /* ignore */
+            }
+        } 
+
+        return retVal;
+    }
 }
+

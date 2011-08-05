@@ -32,8 +32,7 @@ You should have received a copy of the GNU General Public License along with Tod
 	<string name="add_task_failed">追加に失敗しました</string>
 	<string name="updated_task">更新されました</string>
 	<string name="update_task_failed">更新に失敗しました</string>
-	<string name="initialized_dropbox">Initialized Dropbox support! Check
-		Dropbox/todo/todo.txt.</string>
+	<string name="initialized_dropbox">Initialized Dropbox support! Check Dropbox/todo/todo.txt.</string>
 	<string name="sort">並び替え</string>
 	<string name="filter">フィルター</string>
 	<string name="main_no_items">タスクがありません。</string>
@@ -61,14 +60,14 @@ You should have received a copy of the GNU General Public License along with Tod
 	</string>
 	<string name="search_summary">検索する文字列を入力してください</string>
 	<!-- preferences -->
-	<string name="dropbox_logout_pref_title">ログアウト</string>
-	<string name="dropbox_logout_pref_summary">Dropbox からログアウトします。</string>
-	<string name="dropbox_logout_explainer">本当に Dropbox からログアウトしてよろしいですか?</string>
+	<string name="client_logout_pref_title">ログアウト</string>
+	<string name="client_logout_pref_summary">からログアウトします。</string>
+	<string name="client_logout_explainer">本当に からログアウトしてよろしいですか?</string>
 	<string name="TODOTXTPATH_key">todotxtpath</string>
 	<string name="TODOTXTPATH_title">ファイルの場所</string>
-	<string name="TODOTXTPATH_summary">todo.txt ファイルを置く Dropbox 上のフォルダを指定します。</string>
+	<string name="TODOTXTPATH_summary">todo.txt ファイルを置く 上のフォルダを指定します。</string>
 	<string name="TODOTXTPATH_defaultPath">/todo</string>
-	<string name="DROPBOX_settings_header">Dropbox</string>
+	<string name="client_settings_header">Service</string>
 	<string name="todotxt_settings_header">todo.txt</string>
 	<string name="about_settings_header">About</string>
 
@@ -82,11 +81,12 @@ You should have received a copy of the GNU General Public License along with Tod
 	<string name="line_breaks_pref_title">Windows用改行コード</string>
 	<string name="line_breaks_pref_summary">テキストファイルの改行コードをWindows用に設定します。</string>
 	<!-- login -->
-	<string name="dropbox_authentication">Dropbox ログイン</string>
+	<string name="client_authentication">ログイン</string>
 	<string name="username_label">メールアドレス:</string>
 	<string name="password_label">パスワード:</string>
 	<string name="login_button">ログイン</string>
-	<string name="login_screen_button">Dropbox にログイン</string>
+	<string name="login_dropbox_button">Dropbox にログイン</string>
+	<string name="login_evernote_button">Evernote にログイン</string>
 	<!-- delete -->
 	<string name="delete_task_title">削除</string>
 	<string name="delete_task_message">削除すると元には戻せません。本当によろしいですか？</string>

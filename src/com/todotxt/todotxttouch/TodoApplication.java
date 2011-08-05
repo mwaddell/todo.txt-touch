@@ -142,6 +142,18 @@ public class TodoApplication extends Application {
 		editor.commit();
 	}
 
+        public void setClientToken(String token)
+        {
+		Editor editor = m_prefs.edit();
+		editor.putString(Constants.PREF_CLIENT_TOKEN, token);
+		editor.commit();
+        }
+
+        public String getClientToken()
+        {
+            return m_prefs.getString(Constants.PREF_CLIENT_TOKEN);
+        }
+
 	public void showToast(String string) {
 		Util.showToastLong(this, string);
 	}

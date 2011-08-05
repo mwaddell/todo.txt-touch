@@ -32,8 +32,7 @@ You should have received a copy of the GNU General Public License along with Tod
 	<string name="add_task_failed">Konnte Task nicht hinzufügen.</string>
 	<string name="updated_task">Task aktualisiert.</string>
 	<string name="update_task_failed">Konnte Task nicht aktualisieren.</string>
-	<string name="initialized_dropbox">Dropbox Unterstützung eingerichtet! Siehe
-		Dropbox/todo/todo.txt.</string>
+	<string name="initialized_dropbox">Dropbox Unterstützung eingerichtet! Siehe Dropbox/todo/todo.txt.</string>
 	<string name="sort">Sortieren</string>
 	<string name="filter">Filtern</string>
 	<string name="main_no_items">Keine anzuzeigenden Tasks.</string>
@@ -59,16 +58,16 @@ You should have received a copy of the GNU General Public License along with Tod
 	</string>
 	<string name="search_summary">Zu suchenden Text eingeben.</string>
 	<!-- preferences -->
-	<string name="dropbox_logout_pref_title">Ausloggen</string>
-	<string name="dropbox_logout_pref_summary">Aus Dropbox ausloggen.</string>
-	<string name="dropbox_logout_explainer">Wollen Sie sich wirklich aus Dropbox ausloggen?
+	<string name="client_logout_pref_title">Ausloggen</string>
+	<string name="client_logout_pref_summary">ausloggen.</string>
+	<string name="client_logout_explainer">Wollen Sie sich wirklich ausloggen?
 	</string>
 	<string name="TODOTXTPATH_key">todotxtpath</string>
 	<string name="TODOTXTPATH_title">Ort der Datei</string>
-	<string name="TODOTXTPATH_summary">Der Dropbox Ordner in dem todo.txt gespeichert wird.
+	<string name="TODOTXTPATH_summary">Der Ordner in dem todo.txt gespeichert wird.
 	</string>
 	<string name="TODOTXTPATH_defaultPath">/todo</string>
-	<string name="DROPBOX_settings_header">Dropbox</string>
+	<string name="client_settings_header">Service</string>
 	<string name="todotxt_settings_header">todo.txt</string>
 	<string name="about_settings_header">Über</string>
 
@@ -81,11 +80,12 @@ You should have received a copy of the GNU General Public License along with Tod
 	<string name="show_line_numbers_pref_title">Zeilennummern anzeigen.</string>
 	<string name="show_line_numbers_pref_summary">Zeige die Zeilennummern aller Tasks an.</string>
 	<!-- login -->
-	<string name="dropbox_authentication">In Dropbox einloggen</string>
+	<string name="client_authentication">Einloggen</string>
 	<string name="username_label">Email Adresse:</string>
-	<string name="password_label">Dropbox Kennwort:</string>
+	<string name="password_label">Kennwort:</string>
 	<string name="login_button">Einloggen</string>
-	<string name="login_screen_button">In Dropbox einloggen</string>
+	<string name="login_dropbox_button">In Dropbox einloggen</string>
+	<string name="login_evernote_button">In Evernote einloggen</string>
 	<!-- delete -->
 	<string name="delete_task_title">Task löschen</string>
 	<string name="delete_task_message">Kann nicht rückgängig gemacht werden. Sind Sie sicher?</string>

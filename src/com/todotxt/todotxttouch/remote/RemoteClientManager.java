@@ -26,6 +26,7 @@
 
 package com.todotxt.todotxttouch.remote;
 
+import android.util.Log;
 import android.content.SharedPreferences;
 
 import com.todotxt.todotxttouch.TodoApplication;
@@ -34,12 +35,13 @@ import com.todotxt.todotxttouch.TodoApplication;
  * Manager for obtaining, switching, etc. remote clients
  * 
  * @author Tim Barlotta
+ * @author Michael J. Waddell <michael[at]waddellnet[dot]com>
  */
 public class RemoteClientManager implements
-		SharedPreferences.OnSharedPreferenceChangeListener {
-	// private final static String TAG =
-	// RemoteClientManager.class.getSimpleName();
-	@SuppressWarnings("unused")
+		SharedPreferences.OnSharedPreferenceChangeListener 
+{
+	private final static String TAG = RemoteClientManager.class.getSimpleName();
+
 	private Client currentClientToken;
 	private RemoteClient currentClient;
 	private TodoApplication todoApplication;
@@ -65,18 +67,43 @@ public class RemoteClientManager implements
 	 * @param clientToken
 	 * @return
 	 */
-	private RemoteClient getRemoteClient(Client clientToken) {
+	private RemoteClient getRemoteClient(Client clientToken) 
+	{
+		if (clientToken == Client.DROPBOX) {
+			Log.v(TAG, "Creating new DROPBOX client");
+			return new DropboxRemoteClient(todoApplication, sharedPreferences);
+		}
+
+		if (clientToken == Client.EVERNOTE) {
+			Log.v(TAG, "Creating new EVERNOTE client");
+			throw new UnsupportedOperationException();
+			// return new EvernoteRemoteClient(todoApplication, sharedPreferences);
+		}
+
+		if (clientToken == Client.LOCAL) {
+			Log.v(TAG, "Creating new LOCAL client");
+			throw new UnsupportedOperationException();
+			// return new LocalClient(todoApplication, sharedPreferences);
+		}
+
+		Log.i(TAG, "NO CLIENT SPECIFIED - Defaultint to DROPBOX client");
 		return new DropboxRemoteClient(todoApplication, sharedPreferences);
 	}
 
 	@Override
 	public void onSharedPreferenceChanged(SharedPreferences sharedPreferences,
-			String key) {
-		// TODO later
+			String key) 
+	{
+		if (Constants.PREF_CLIENT_TOKEN.equals(key)) {
+			Log.i(TAG, "New Client Token. Syncing!");
+
+			this.sharedPreferences = sharedPreferences;
+			calculateRemoteClient(sharedPreferences);
+		} // else ignore
 	}
 
 	private void calculateRemoteClient(SharedPreferences sharedPreferences) {
-		currentClient = getRemoteClient(Client.DROPBOX);
-		currentClientToken = Client.DROPBOX;
+		currentClientToken = Client.fromString(sharedPreferences.getString(Constants.PREF_CLIENT_TOKEN, null));
+		currentClient = getRemoteClient(currentClientToken);
 	}
 }

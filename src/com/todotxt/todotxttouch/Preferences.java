@@ -66,7 +66,7 @@ public class Preferences extends PreferenceActivity {
 			// e.printStackTrace();
 		}
 		aboutDialog = findPreference("app_version");
-		logoutDialog = findPreference("logout_dropbox");
+		logoutDialog = findPreference("logout_client");
 	}
 
 	protected void onResume() {
@@ -110,8 +110,8 @@ public class Preferences extends PreferenceActivity {
 		} else if (id == LOGOUT_DIALOG) {
 			AlertDialog.Builder logoutAlert = new AlertDialog.Builder(this);
 			logoutAlert.setTitle(R.string.areyousure);
-			logoutAlert.setMessage(R.string.dropbox_logout_explainer);
-			logoutAlert.setPositiveButton(R.string.dropbox_logout_pref_title,
+			logoutAlert.setMessage(R.string.client_logout_explainer);
+			logoutAlert.setPositiveButton(R.string.client_logout_pref_title,
 					new DialogInterface.OnClickListener() {
 						@Override
 						public void onClick(DialogInterface dialog, int which) {

@@ -33,7 +33,7 @@ public class Constants {
 	public static final String PREF_FIRSTRUN = "firstrun";
 	public static final String PREF_ACCESSTOKEN_KEY = "accesstokenkey";
 	public static final String PREF_ACCESSTOKEN_SECRET = "accesstokensecret";
-	public static final String DROPBOX_MODUS = "dropbox";
+	public static final String PREF_CLIENT_TOKEN = "defaultclienttoken";
 
 	public final static long INVALID_ID = -1;
 	public final static int INVALID_POSITION = -1;

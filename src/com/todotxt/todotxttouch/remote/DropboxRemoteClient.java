@@ -44,6 +44,7 @@ import com.todotxt.todotxttouch.TodoApplication;
 import com.todotxt.todotxttouch.util.Util;
 
 class DropboxRemoteClient implements RemoteClient {
+	public static final String DROPBOX_MODUS = "dropbox";
 	private static final String TODO_TXT_REMOTE_FILE_NAME = "todo.txt";
 	private static final File TODO_TXT_TMP_FILE = new File(
 			Environment.getExternalStorageDirectory(),
@@ -150,7 +151,7 @@ class DropboxRemoteClient implements RemoteClient {
 			return null;
 		}
 		DropboxAPI.FileDownload fileDownload = dropboxApi.getFileStream(
-				Constants.DROPBOX_MODUS, getRemotePathAndFilename(), null);
+				DROPBOX_MODUS, getRemotePathAndFilename(), null);
 		if (null == fileDownload) {
 			throw new RemoteException("Cannot get file from Dropbox");
 		} else if (fileDownload.isError()) {
@@ -190,7 +191,7 @@ class DropboxRemoteClient implements RemoteClient {
 			throw new RemoteException("Failed to ensure that file exists", e);
 		}
 
-		dropboxApi.putFile(Constants.DROPBOX_MODUS, getRemotePath(), file);
+		dropboxApi.putFile(DROPBOX_MODUS, getRemotePath(), file);
 	}
 
 	Config getConfig() {

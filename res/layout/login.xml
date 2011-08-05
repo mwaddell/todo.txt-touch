@@ -74,11 +74,25 @@ You should have received a copy of the GNU General Public License along with Tod
 	/>
 	</LinearLayout>
 	
-	<Button android:id="@+id/login"
+	<Button android:id="@+id/dropbox"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_gravity="center_horizontal"
 		android:textSize="8pt"
-		android:text="@string/login_screen_button" />
+		android:text="@string/login_dropbox_button" />
+
+	<Button android:id="@+id/evernote"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_horizontal"
+		android:textSize="8pt"
+		android:text="@string/login_evernote_button" />
+
+	<Button android:id="@+id/local"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_horizontal"
+		android:textSize="8pt"
+		android:text="@string/login_local_button" />
 </LinearLayout>
 </FrameLayout>
