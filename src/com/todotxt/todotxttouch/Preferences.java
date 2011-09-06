@@ -118,6 +118,8 @@ public class Preferences extends PreferenceActivity {
 							((TodoApplication) getApplication())
 									.getRemoteClientManager().getRemoteClient()
 									.deauthenticate();
+							((TodoApplication) getApplication()).setClientToken(null);
+
 							Preferences.this.setResult(RESULT_SYNC_LIST);
 
 							// produce a logout intent and broadcast it
