@@ -1,6 +1,6 @@
 /**
  *
- * Todo.txt Touch/src/com/todotxt/todotxttouch/remote/DropboxSyncClient.java
+ * Todo.txt Touch/src/com/todotxt/todotxttouch/remote/RemoteClient.java
  *
  * Copyright (c) 2009-2011 mathias, Gina Trapani, Tormod Haugen, Tim Barlotta
  *
