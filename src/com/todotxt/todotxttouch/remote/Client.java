@@ -35,7 +35,6 @@ package com.todotxt.todotxttouch.remote;
 public enum Client 
 {
     DROPBOX,
-    EVERNOTE,
     LOCAL;
 
     @Override

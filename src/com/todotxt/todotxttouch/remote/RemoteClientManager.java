@@ -88,12 +88,6 @@ public class RemoteClientManager implements
 			return new DropboxRemoteClient(todoApplication, sharedPreferences);
 		}
 
-		if (clientToken == Client.EVERNOTE) {
-			Log.v(TAG, "Creating new EVERNOTE client");
-			throw new UnsupportedOperationException();
-			// return new EvernoteRemoteClient(todoApplication, sharedPreferences);
-		}
-
 		if (clientToken == Client.LOCAL) {
 			Log.v(TAG, "Creating new LOCAL client");
 			throw new UnsupportedOperationException();

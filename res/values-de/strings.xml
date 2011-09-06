@@ -85,7 +85,6 @@ You should have received a copy of the GNU General Public License along with Tod
 	<string name="password_label">Kennwort:</string>
 	<string name="login_button">Einloggen</string>
 	<string name="login_dropbox_button">In Dropbox einloggen</string>
-	<string name="login_evernote_button">In Evernote einloggen</string>
 	<!-- delete -->
 	<string name="delete_task_title">Task löschen</string>
 	<string name="delete_task_message">Kann nicht rückgängig gemacht werden. Sind Sie sicher?</string>

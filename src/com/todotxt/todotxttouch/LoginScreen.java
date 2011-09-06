@@ -76,12 +76,6 @@ public class LoginScreen extends Activity {
 				login("DROPBOX");
 			}
 		});
-			m_LoginButton = (Button) findViewById(R.id.evernote);
-		m_LoginButton.setOnClickListener(new OnClickListener() {
-			public void onClick(View v) {
-				login("EVERNOTE");
-			}
-		});
 			m_LoginButton = (Button) findViewById(R.id.local);
 		m_LoginButton.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
