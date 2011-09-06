@@ -90,8 +90,7 @@ public class RemoteClientManager implements
 
 		if (clientToken == Client.LOCAL) {
 			Log.v(TAG, "Creating new LOCAL client");
-			throw new UnsupportedOperationException();
-			// return new LocalClient(todoApplication, sharedPreferences);
+			return new LocalClient(todoApplication, sharedPreferences);
 		}
 		
 		return DUMMY_CLIENT;
