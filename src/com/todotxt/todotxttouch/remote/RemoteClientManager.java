@@ -26,9 +26,11 @@
 
 package com.todotxt.todotxttouch.remote;
 
+import java.io.File;
 import android.util.Log;
 import android.content.SharedPreferences;
 
+import com.todotxt.todotxttouch.Constants;
 import com.todotxt.todotxttouch.TodoApplication;
 
 /**

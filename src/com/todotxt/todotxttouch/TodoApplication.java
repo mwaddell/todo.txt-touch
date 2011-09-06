@@ -151,7 +151,7 @@ public class TodoApplication extends Application {
 
         public String getClientToken()
         {
-            return m_prefs.getString(Constants.PREF_CLIENT_TOKEN);
+            return m_prefs.getString(Constants.PREF_CLIENT_TOKEN, null);
         }
 
 	public void showToast(String string) {

@@ -120,7 +120,7 @@ class DropboxLoginAsyncTask extends AsyncTask<Void, Void, Integer> implements
 
 		AlertDialog.Builder b = new AlertDialog.Builder(act);
 		b.setView(v);
-		b.setTitle(R.string.dropbox_authentication);
+		b.setTitle(R.string.client_authentication);
 		b.setCancelable(true);
 		b.setPositiveButton(R.string.login_button, new OnClickListener() {
 			@Override

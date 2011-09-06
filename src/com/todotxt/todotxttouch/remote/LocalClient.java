@@ -32,6 +32,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
@@ -83,6 +84,7 @@ class LocalClient implements RemoteClient
             @Override public void showLoginDialog(Activity a) {
                 todoApplication.sendBroadcast(
                     new Intent("com.todotxt.todotxttouch.ACTION_LOGIN"));
+            }
         };
     }
 
